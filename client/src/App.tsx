@@ -194,7 +194,7 @@ const App = () => {
             <div>
               <h3 className='text-[#ffffffec] text-shadow-lg font-extrabold text-4xl uppercase mt-4 break-all text-center transition-all duration-300'>{verbs[index].infinitive}</h3>
               <h3 className='text-[#ffffffec] text-shadow-lg font-extrabold text-4xl uppercase mt-4 break-all text-center transition-all duration-300'>{verbs[index].past}</h3>
-              <h3 className='text-[#ffffffec] text-shadow-lg font-extrabold text-4xl uppercase mt-4 break-all text-center transition-all duration-300'>{verbs[index].past}</h3>
+              <h3 className='text-[#ffffffec] text-shadow-lg font-extrabold text-4xl uppercase mt-4 break-all text-center transition-all duration-300'>{verbs[index].participle}</h3>
             </div>}
           </div>
 
