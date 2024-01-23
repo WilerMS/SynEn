@@ -2,15 +2,15 @@ import { type FC } from 'react'
 import cn from 'classnames'
 
 interface Props {
+  name: string
   placeholder: string
+  inputRef: any
   success?: boolean
   value?: string
   onChange: (name: string, value: string) => void
-  name: string
-  inputRef: any
 }
 
-const AnswerInput: FC<Props> = ({
+const GameInput: FC<Props> = ({
   placeholder,
   success,
   value,
@@ -19,7 +19,7 @@ const AnswerInput: FC<Props> = ({
   onChange
 }) => {
   return (
-    <div className='h-[90px]'>
+    <div className='w-full h-full'>
       <input
         ref={inputRef}
         type="text"
@@ -50,4 +50,4 @@ const AnswerInput: FC<Props> = ({
   )
 }
 
-export default AnswerInput
+export default GameInput
