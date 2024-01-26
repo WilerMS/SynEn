@@ -23,7 +23,8 @@
       "@hooks/*": ["hooks/*"],
       "@components/*": ["components/*"],
       "@utils/*": ["utils/*"],
-      "@api/*": ["api/*"]
+      "@api/*": ["api/*"],
+      "@features/*": ["features/*"],
     }
   },
   "include": ["src"],
