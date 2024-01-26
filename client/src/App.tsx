@@ -120,7 +120,7 @@ const App = () => {
         >
 
           <div className='absolute left-0 top-0 w-full p-2'>
-            <GameScore score={score} />
+            <GameScore storageKey='ehh' score={score} />
           </div>
 
           <GamePrompt title={currentWord} />
