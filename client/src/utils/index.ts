@@ -5,3 +5,16 @@ export function disorderArray <T> (array: T[]) {
   }
   return array
 }
+
+export const getDataFromForm = (form: HTMLFormElement) => {
+  const _formData = new FormData(form)
+  return Object.fromEntries(_formData.entries()) as Record<string, string>
+}
+
+export const sanitizeText = (text: string) => {
+  return text.toLowerCase().trim()
+}
+
+export const $ = <T extends Element>(selector: string): T | null => {
+  return document.querySelector<T>(selector)
+}
