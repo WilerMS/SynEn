@@ -1,4 +1,6 @@
 export interface Game {
+  gameId: number
+  type: string
   name: string
   instructions: string
   actions: GameAction[]
@@ -6,7 +8,6 @@ export interface Game {
 }
 
 export interface GameAction {
-  type: string
   placeholder: string
   label: string
 }
