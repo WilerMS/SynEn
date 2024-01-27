@@ -25,6 +25,7 @@
       "@utils/*": ["utils/*"],
       "@api/*": ["api/*"],
       "@features/*": ["features/*"],
+      "@games/*": ["games/*"]
     }
   },
   "include": ["src"],
