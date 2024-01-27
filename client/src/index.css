@@ -23,3 +23,36 @@
 .text-shadow-lg {
   text-shadow: 0 5px 10px #02303724
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@layer utilities {
+  
+  .game-input {
+    @apply bg-emerald-50 border-teal-600 text-teal-900  placeholder-teal-700 bg-opacity-60;
+  }
+
+  .game-input-danger {
+    @apply bg-red-50 border-red-500 text-red-900 placeholder-red-700 bg-opacity-60;
+  }
+
+  .game-input-success {
+    @apply bg-green-50 border-emerald-500 text-green-900  placeholder-green-700 bg-opacity-60;
+  }
+
+}
+
+.game-input-success + .input-success {
+  display: block;
+}
+
+.game-input-danger + .input-success + .input-error {
+  display: block;
+}

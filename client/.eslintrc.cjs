@@ -19,6 +19,7 @@ module.exports = {
     '@typescript-eslint/strict-boolean-expressions': 'off',
     'n/no-callback-literal': 'off',
     'no-useless-return': 'off',
-    '@typescript-eslint/no-confusing-void-expression': 'off'
+    '@typescript-eslint/no-confusing-void-expression': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off'
   }
 }
