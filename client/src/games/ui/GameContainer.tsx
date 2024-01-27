@@ -16,7 +16,7 @@ const GameContainer: FC<Props> = ({
         'transition-all duration-300'
       )}
     >
-      <div className=' w-full h-full relative !bg-white !bg-opacity-20 rounded-xl overflow-hidden'>
+      <div className='w-full h-full p-10 z-10 relative !bg-white !bg-opacity-20 rounded-xl overflow-hidden'>
         {children}
       </div>
     </div>
