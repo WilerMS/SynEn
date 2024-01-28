@@ -16,7 +16,7 @@ const GamePrompt: FC<Props> = ({
   size = 'medium'
 }) => {
   return (
-    <div className="w-full h-full center flex-col">
+    <div className="w-full h-full center flex-col min-h-[150px] ">
       {title && <h2
         className={cn(
           'text-[#ffffffec] text-shadow-lg font-extrabold text-7xl uppercase mt-4 break-all text-center'
@@ -25,7 +25,7 @@ const GamePrompt: FC<Props> = ({
         {title}
       </h2>}
       {image &&
-        <img className='max-h-[100px]' src={image} alt="" />
+        <img className='rounded-lg max-h-[150px] w-full h-full object-cover mt-6 opacity-90' src={image} alt="" />
       }
       {description &&
         <span className='text-[#ffffffec] text-shadow-lg text-lg mt-2 capitalize'>{description}</span>
