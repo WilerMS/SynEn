@@ -18,3 +18,11 @@ export const sanitizeText = (text: string) => {
 export const $ = <T extends Element>(selector: string): T | null => {
   return document.querySelector<T>(selector)
 }
+
+export const delay = async (time: number = 500): Promise<void> => {
+  return await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve()
+    }, time)
+  })
+}
