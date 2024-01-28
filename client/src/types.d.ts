@@ -13,7 +13,8 @@ export interface GameAction {
 }
 
 export interface GameQuestion {
-  prompt: string
+  prompt?: string
+  image?: string
   answers: GameAnswer[]
 }
 
