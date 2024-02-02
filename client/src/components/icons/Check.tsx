@@ -1,10 +1,10 @@
-import { type FC } from 'react'
+import { type FC, type SVGProps } from 'react'
 
-interface Props {
+interface Props extends SVGProps<SVGSVGElement> {
   className?: string
 }
 
-const Check: FC<Props> = ({ className }) => {
+const Check: FC<Props> = ({ className, ...props }) => {
   return (
     <svg
       className={className}
@@ -16,6 +16,7 @@ const Check: FC<Props> = ({ className }) => {
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
+      {...props}
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
       <path
