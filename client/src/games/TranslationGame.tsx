@@ -5,31 +5,26 @@ import { getGameById } from '@api/game'
 import { GameInput, GamePrompt } from '@games/ui'
 import { useScore, GameScore, NextButton, SkipButton } from '@games/features'
 import { $, getDataFromForm, sanitizeText } from '@utils/index'
+import { type Game } from 'types'
 
 interface Props {
-  gameId: number
+  game: Game
 }
 
 const TranslationGame: FC<Props> = (props) => {
-  const { gameId } = props
+  const { game } = props
 
   const gameFormRef = useRef<HTMLFormElement>(null)
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const { score, incrementScore, resetScore } = useScore()
-  const { data: currentGame } = useQuery({
-    queryKey: ['game', gameId],
-    queryFn: async () => await getGameById(gameId)
-  })
 
-  if (!currentGame) return (<Loader />)
-
-  const currentQuestion = currentGame.questions[currentQuestionIndex]
-  const gameActions = currentGame.actions
+  const currentQuestion = game.questions[currentQuestionIndex]
+  const gameActions = game.actions
 
   const advanceToNextQuestion = () => {
     gameFormRef.current?.reset()
     setCurrentQuestionIndex(
-      prev => (currentGame.questions.length - 1) > prev ? prev + 1 : 0
+      prev => (game.questions.length - 1) > prev ? prev + 1 : 0
     )
     const inputActions = $('.action-inputs')!.children
 
@@ -82,7 +77,7 @@ const TranslationGame: FC<Props> = (props) => {
       className=''
     >
       <div className="absolute left-0 top-0 w-full p-2">
-        <GameScore gameId={gameId} score={score} />
+        <GameScore gameId={game.gameId} score={score} />
       </div>
       <div className="w-full h-full">
         <GamePrompt title={currentQuestion.prompt} image={currentQuestion.image} />
