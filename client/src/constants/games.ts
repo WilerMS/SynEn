@@ -4,6 +4,6 @@ import { regularVerbsGame } from './regularVerbs'
 
 export const games = [
   irregularVerbsGame,
-  animalsGame,
-  regularVerbsGame
+  regularVerbsGame,
+  animalsGame
 ]
